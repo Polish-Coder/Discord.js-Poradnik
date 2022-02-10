@@ -18,6 +18,7 @@ module.exports = {
         .setImage(user.avatarURL({ dynamic: true, size: 512 }))
         .setTimestamp()
         .setFooter(message.author.tag, message.author.avatarURL({ dynamic: true }));
+        // .setFooter({ text: message.author.tag, iconURL: message.author.avatarURL({dynamic : true}) }); // <-- dla najnowszej wersji Discord.js
 
         message.channel.send({ embeds: [embed] });
     }
